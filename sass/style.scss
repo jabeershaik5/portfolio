@@ -1,0 +1,337 @@
+@import './utils/variables';
+@import './base/base';
+@import './base/layout';
+@import './utils/mixins';
+
+.container{
+    display: grid;
+    grid-template-rows: max-content repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(5rem, 1fr) repeat(6,[col-start] 1fr [col-end]) minmax(5rem, 1fr) [full-end];
+    
+    @include responsive(480){
+        grid-template-rows: repeat(2, min-content) repeat(3, min-content);
+    }
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: inherit;
+
+    &__logo{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    &__menu{
+        display: flex;
+        li{
+            cursor: pointer;
+        }
+    }
+    &__social{
+        height:2.5rem;
+        width:2.5rem;
+        fill:$color-gray-light;
+        margin:0 1rem;
+    }
+}
+
+.hero{
+   overflow: hidden;
+    &__content{
+        grid-column: full-start/ span 4;
+        padding:0 2rem;
+        padding-top:3rem;
+        width:130%;
+        user-select: none;
+        justify-self: stretch;
+        overflow: hidden;
+        
+        @include responsive(1100){
+            grid-column: full-start/ span 5;
+        };
+        @include responsive(900){
+            width:150%;
+            background-color: transparent;
+            z-index:2;
+        }
+        @include responsive(480){
+            grid-column: full-start/ span 6;
+            grid-row:2/ span 1;
+            padding-top:0;
+            width:130%;
+        }
+    }
+    &__image{
+        grid-column: 6/ span 2;
+        grid-row:1/ span 1;
+        padding-bottom:5rem;
+        width:25rem;
+        justify-self: end;
+        overflow: hidden;
+
+        @include responsive(1100){
+            grid-column: 7/ full-end;
+        };
+        @include responsive(480){
+            grid-column: 3/ span 4;
+        }
+        
+
+        &-container{
+            height:100%;
+            min-width:100%;
+            background-color: rgb(84, 84, 85);
+            display: grid;
+            padding-top:3rem;
+            
+
+            &__name{
+                display: none;
+            }
+            @include responsive(480){
+                text-align: center;
+
+                &__name{
+                    display: block;
+                    margin-bottom: 1.5rem;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    &__logo{
+        font-size: 2rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        @include responsive(480){
+            display: none;
+        }
+    }
+    &__dev-image{
+        width:160%;
+        height:80%;
+        align-self: flex-end;
+        filter: grayscale(80%);
+        transform:translateX(-5rem);
+
+        @include responsive(480){
+            height:100%;
+        }
+    }
+    &__socials{
+        display: flex;
+        justify-content:end;
+
+        @include responsive(480){
+            justify-content: center;
+        }
+    }
+    &__msgs{
+        height:80%;
+        font-size: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top:5rem;
+
+        @include responsive(900){
+            font-size: 7rem;
+        }
+        @include responsive(680){
+            font-size: 5rem;
+        }
+        @include responsive(480){
+            height:100%;
+            margin-top:0;
+            font-size: 4rem;
+        }
+    }
+    &__msg{
+        font-size: 1.8rem;
+        margin:2rem 0;
+    }
+}
+.contact{
+    align-self: flex-start;
+    padding:1rem 0rem;
+    outline:none;
+    background-color: transparent;
+    border: none;
+    color:white;
+    margin-top:2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.underline{
+    border-bottom:4px solid $color-green-dark;
+}
+.skills{
+    padding:3rem 2rem;
+    &__section{
+        padding:0rem;
+        border-top:2px solid $color-gray-light;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        font-size: 4rem;
+        justify-items: center;
+        @include responsive(900){
+            grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        }
+        @include responsive(680){
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        }
+        @include responsive(480){
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            font-size: 3rem;
+        }
+    }
+    &__box{
+        margin:2rem 0;
+        padding:1rem 0;
+    }
+    &__skill{
+        cursor: pointer;
+    }
+}
+
+
+.projects{
+    &__section{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(30rem, 1fr));
+        grid-gap:4rem;
+        padding:0rem;
+
+        @include responsive(900){
+            grid-gap:2rem;
+        }
+        @include responsive(680){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    &__card{
+        width:100%;
+        border-radius:5px;
+        display: grid;
+        grid-template-rows: 35rem 10rem;
+        overflow: hidden;
+    }
+    &__video{
+        grid-row: 1/ span 1;
+        width:100.8%;
+        height:100%;
+        overflow: hidden;
+        
+    }
+    &__video-play{
+        object-fit: fill;
+        width:100%;
+        height:100%;
+        user-select: none;
+    }
+    &__titles{
+        background-color: $color-black-theme;
+        grid-row: 2/ span 1;
+        padding:2rem 0;
+
+        &-name{
+            font-size: 2rem;
+        }
+        &-tech{
+            font-size: 1.5rem;
+            margin-top: 1rem;
+
+            span{
+                background-color: black;
+                padding:0.5rem 1rem;
+                border-radius:2px;
+                font-size: 1.3rem;
+                user-select: none;
+            }
+            & span:not(:first-child){
+                margin-left:1rem;
+            }
+        }
+    }
+
+    
+}
+
+.footer{
+    padding:0rem 1rem;
+
+    &__section{
+        padding:0rem;
+        display: grid;
+        grid-template-columns: repeat(4, [col-start] minmax(10rem, 1fr) [col-end]);
+        grid-template-rows: 35rem 8rem;
+        
+        @include responsive(680){
+            grid-template-rows: min-content 35rem 8rem;
+        }
+    }
+    &__contact-card{
+        padding:2rem 0;
+        grid-column: col-start 1/ span 2;
+        grid-row:1/ span 1;
+
+        @include responsive(680){
+            grid-column: col-start/ full-end;
+        }
+    }
+    &__form{
+        padding:2rem 3rem;
+        grid-column: col-start 3/ -1;
+        display: flex;
+        flex-direction: column;
+        @include responsive(680){
+            grid-column: col-start/ full-end;
+            grid-row: 2/ span 1;
+        }
+    }
+    &__nav{
+        padding:1rem 0;
+        grid-column: 1/ -1;
+        padding:2rem 0;
+        border-top:2px solid $color-gray-light;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.form{
+    &__send-btn{
+        align-self: end;
+        border:none;
+        outline:none;
+        background-color: transparent;
+        color:white;
+        margin:2rem;
+        padding:0.5rem 0;
+        border-bottom:2px solid $color-green-dark;
+        cursor: pointer;
+    }
+    &__input{
+        background-color: transparent;
+        outline:none;
+        border:none;
+        border-bottom:1px solid $color-gray-light;
+        margin:1rem;
+        padding:2rem;
+        color:white;
+        &::placeholder{
+            color:white
+        }
+    }
+}
+.contact-card{
+    &__title{
+        font-size: $font-large;
+        margin:1rem 0;
+    }
+    &__text{
+        font-size: 1.7rem;
+    }
+}

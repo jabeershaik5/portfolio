@@ -1,0 +1,21 @@
+@font-face {
+    font-family: oswald-r;
+    src: url('../../assets/fonts/Oswald/static/Oswald-Regular.ttf');
+}
+@font-face {
+    font-family: oswald-b;
+    src: url('../../assets/fonts/Oswald/static/Oswald-Bold.ttf');
+}
+@font-face {
+    font-family: oswald-sb;
+    src: url('../../assets/fonts/Oswald/static/Oswald-SemiBold.ttf');
+}
+
+$font-bold : oswald-b;
+$font-regular : oswald-r;
+$font-semi : oswald-sb;
+$font-large:6rem;
+
+$color-gray-light: rgb(181, 178, 178);
+$color-black-theme:rgb(44, 42, 42);
+$color-green-dark: rgb(20, 146, 52);

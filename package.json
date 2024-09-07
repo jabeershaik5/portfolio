@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "sass --watch ./sass/style.scss:./css/style.watch.css",
+    "build-sass": "sass ./sass/style.scss:./css/style.build.css",
+    "prefix-sass": "postcss --use autoprefixer -b 'last 10 versions' ./css/style.build.css -o ./css/style.pre.css"
+  },
+  "author": "Jabeer Shaik",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss-cli": "^11.0.0"
+  }
+}

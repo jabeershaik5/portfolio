@@ -1,0 +1,19 @@
+.nav{
+    grid-row: 1 / span 1;
+    grid-column: full-start / full-end;
+    align-content: center;
+}
+.skills{
+    grid-column: full-start/ full-end;
+    grid-row: 3/ span 1;
+}
+.projects{
+    grid-column: full-start / full-end;
+    grid-row: 4/ span 1;
+    padding:2rem;
+}
+.footer{
+    grid-column:full-start/ full-end;
+    padding:2rem;
+    grid-row: 5/ span 1;
+}

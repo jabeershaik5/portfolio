@@ -1,0 +1,53 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+
+    @include responsive(1100){
+        font-size: 57%;
+    };
+    @include responsive(900){
+        font-size: 55%;
+    }
+    @include responsive(680){
+        font-size: 52%;
+    }
+    @include responsive(480){
+        font-size: 49%;
+    }
+}
+body{
+    background-color: $color-black-theme;
+    color:white;
+    font-family: $font-regular;
+    letter-spacing: 1.5px;
+    padding:0 8rem;
+    
+    @include responsive(900){
+        padding:0 4rem;
+    }
+    @include responsive(680){
+        padding:0 2rem;
+    }
+    @include responsive(480){
+        padding:0 1rem;
+    }
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+.section{
+    width:100%;
+    padding:0 4rem;
+}
+
