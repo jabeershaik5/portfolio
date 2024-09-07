@@ -1,26 +1,26 @@
 @font-face {
   font-family: oswald-r;
-  src: url("../../assets/fonts/Oswald/static/Oswald-Regular.ttf");
+  src: url("../assets/fonts/Oswald/static/Oswald-Regular.ttf");
 }
 @font-face {
   font-family: oswald-b;
-  src: url("../../assets/fonts/Oswald/static/Oswald-Bold.ttf");
+  src: url("../assets/fonts/Oswald/static/Oswald-Bold.ttf");
 }
 @font-face {
   font-family: oswald-sb;
-  src: url("../../assets/fonts/Oswald/static/Oswald-SemiBold.ttf");
+  src: url("../ssets/fonts/Oswald/static/Oswald-SemiBold.ttf");
 }
 @font-face {
   font-family: oswald-r;
-  src: url("../../assets/fonts/Oswald/static/Oswald-Regular.ttf");
+  src: url("../assets/fonts/Oswald/static/Oswald-Regular.ttf");
 }
 @font-face {
   font-family: oswald-b;
-  src: url("../../assets/fonts/Oswald/static/Oswald-Bold.ttf");
+  src: url("../assets/fonts/Oswald/static/Oswald-Bold.ttf");
 }
 @font-face {
   font-family: oswald-sb;
-  src: url("../../assets/fonts/Oswald/static/Oswald-SemiBold.ttf");
+  src: url("../assets/fonts/Oswald/static/Oswald-SemiBold.ttf");
 }
 *,
 *::after,
