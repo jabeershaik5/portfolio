@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         if(videoSrc){
             const videoTag = document.createElement('video');
-
-            videoTag.setAttribute('autoplay', 'autoplay');
-            videoTag.setAttribute('loop','loop');
-            videoTag.setAttribute('muted', 'muted');
+            videoTag.controls = false;
+            videoTag.muted = true;
+            videoTag.loop = true;
+            videoTag.autoplay = true;
             videoTag.setAttribute('playsinline', 'playsinline');
             videoTag.setAttribute('class', 'projects__video-play');
 
@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
             sourceTag.setAttribute('type','video/mp4');
 
             videoTag.appendChild(sourceTag);
-
+            videoTag.play();
             container.innerHTML = '';
             container.appendChild(videoTag);
+            
         }
     }
 
