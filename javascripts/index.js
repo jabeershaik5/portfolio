@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         if(videoSrc){
             const videoTag = document.createElement('video');
 
-            videoTag.setAttribute('autoplay', 'autoplay'); 
             videoTag.setAttribute('loop','loop');
             videoTag.setAttribute('muted', 'muted');
             videoTag.setAttribute('playsinline', 'playsinline');
